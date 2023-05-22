@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+ function method (arr) {
+	let newarr = [arr[0]]
+	for(let i = 1; i < arr.length; i++){
+		let flag = true
+		for(let j = 0; j < newarr.length; j++) {
+			if( arr[i] === newarr[j] ) {
+				flag = false
+				break
+			}   
+    }
+    if( flag ) {
+            newarr.push(arr[i])
+          }
+  }
+    return newarr
+}
+  const arr = [1,2,2,3,4,4,5]
+  const newarr = method(arr)
+  console.log(newarr);
+
+  </script>
+</body>
+</html>
